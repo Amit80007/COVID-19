@@ -88,13 +88,13 @@
             <div>  
             <h4> Using Conda </h4>
               <ol>
-              <l1> Download and Install Miniconda from [conda.io](https://docs.conda.io/en/latest/miniconda.html)</l1>
-              <l1> For Windows, launch Miniconda prompt shell. For MacOS, launch the terminal.</l1>
+              <l1> Download and Install Miniconda from [conda.io](https://docs.conda.io/en/latest/miniconda.html)</l1><br />
+              <l1> For Windows, launch Miniconda prompt shell. For MacOS, launch the terminal.</l1><br />
               <l1> Create a new virtual environment and install packages. 
               ```python 
               conda create -n crest python pandas tqdm
               conda activate crest
-              ``` </l1>
+              ``` </l1><br />
               <l1> If using cuda:
               ```python
               conda install pytorch cudatoolkit=10.1 -c pytorch
@@ -103,37 +103,37 @@
               ```python
               conda install pytorch cpuonly -c pytorch
               ```
-              </l1>
-              <l1> Clone the repository. More details can be found at [docs.github.com](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) </l1>
+              </l1><br />
+              <l1> Clone the repository. More details can be found at [docs.github.com](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) </l1><br />
               
               <l1> Go to "x43_accessibility-" folder in your terminal/prompt shell. Run command.
               ```python
               pip install -r requirements.txt
-              ``` </l1>
-              <l1> Install chromedriver. The details can be found in [chromium.org](https://chromedriver.chromium.org/downloads). </l1>
+              ``` </l1><br />
+              <l1> Install chromedriver. The details can be found in [chromium.org](https://chromedriver.chromium.org/downloads). </l1><br />
               
-              <l1> Download and Install google-chrome-stable from [ubuntuupdates.org](https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable). </l1>
+              <l1> Download and Install google-chrome-stable from [ubuntuupdates.org](https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable). </l1><br />
               
               <l1> Once all the required libraries are installed, run command in your terminal/prompt shell. 
               ```python
               python server.py
-              ``` </l1>
+              ``` </l1><br />
               </ol></div>
               <div>
               <h4> Using Docker </h4>
               <ol>
-              <l1> Clone the repository. More details can be found at [docs.github.com](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository). </l1>
+              <l1> Clone the repository. More details can be found at [docs.github.com](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository). </l1><br />
               
-              <l1> Download and Install docker from [docker.com](https://docs.docker.com/get-docker/). Note: Make sure your docker server as well as crest image is running. </l1>
+              <l1> Download and Install docker from [docker.com](https://docs.docker.com/get-docker/). Note: Make sure your docker server as well as crest image is running. </l1><br />
               
               <l1> Go to "x43_accessibility-" folder in your terminal/prompt shell. Run command.
               ```python
               docker build -t crest .
-              ``` </l1>
+              ``` </l1><br />
               <l1> Once the docker image is created, run it by executing the following command.
               ```python
               docker container run --name crest_container -p 3000:3000 crest 
-              ``` </l1>
+              ``` </l1><br />
               </ol>
             </div>
             <!-- <p>If you want a quick and easy way to install Crest™ just about anywhere, you can grab one of the pre-built ISO images:</p>
