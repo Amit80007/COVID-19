@@ -68,7 +68,7 @@
 
             <p>Crest quickly tests any HTML web page for a simple way to solve your accessibility testing problems. Provide a website URL to our callable API and expose potential WCAG violations.</p>
 
-            <h3>Currently supports:</h3>
+            <h4>Currently supports:</h4>
             <ul>
               <li><strong>Keyboard Focus Indicator</strong></li>
               <li><strong>Closed Captioning/ Transcript Check</strong></li>
@@ -85,8 +85,58 @@
         <div class='row'>
           <div class='content'>
             <h2 id="getting-photon">Getting Crest™</h2>
+            <p>
 
-            <p>If you want a quick and easy way to install Crest™ just about anywhere, you can grab one of the pre-built ISO images:</p>
+              <h3> Using Conda </h3>
+              <ol>
+              <l1> Download and Install Miniconda from [conda.io](https://docs.conda.io/en/latest/miniconda.html)</l1>
+              <l1> For Windows, launch Miniconda prompt shell. For MacOS, launch the terminal.</l1>
+              <l1> Create a new virtual environment and install packages. 
+              ```python 
+              conda create -n crest python pandas tqdm
+              conda activate crest
+              ``` </l1>
+              <l1> If using cuda:
+              ```python
+              conda install pytorch cudatoolkit=10.1 -c pytorch
+              ```
+              else:
+              ```python
+              conda install pytorch cpuonly -c pytorch
+              ```
+              </l1>
+              <l1> Clone the repository. More details can be found at [docs.github.com](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) </l1>
+              
+              <l1> Go to "x43_accessibility-" folder in your terminal/prompt shell. Run command.
+              ```python
+              pip install -r requirements.txt
+              ``` </l1>
+              <l1> Install chromedriver. The details can be found in [chromium.org](https://chromedriver.chromium.org/downloads). </l1>
+              
+              <l1> Download and Install google-chrome-stable from [ubuntuupdates.org](https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable). </l1>
+              
+              <l1> Once all the required libraries are installed, run command in your terminal/prompt shell. 
+              ```python
+              python server.py
+              ``` </l1>
+              </ol>
+              <h3> Using Docker </h3>
+              
+              <l1> Clone the repository. More details can be found at [docs.github.com](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository). </l1>
+              
+              <l1> Download and Install docker from [docker.com](https://docs.docker.com/get-docker/). Note: Make sure your docker server as well as crest image is running. </l1>
+              
+              <l1> Go to "x43_accessibility-" folder in your terminal/prompt shell. Run command.
+              ```python
+              docker build -t crest .
+              ``` </l1>
+              <l1> Once the docker image is created, run it by executing the following command.
+              ```python
+              docker container run --name crest_container -p 3000:3000 crest 
+              ``` </l1>
+
+            </p>
+            <!-- <p>If you want a quick and easy way to install Crest™ just about anywhere, you can grab one of the pre-built ISO images:</p>
 
             <ul>
               <li><a href="https://dl.bintray.com/vmware/photon/iso/1.0TP2/x86_64/photon-1.0TP2.iso" target="_blank">Crest, Tech Preview 2 &mdash; Full ISO</a> - Contains everything you could need to install Crest, including rpm-ostree hosts and servers.</li>
@@ -106,7 +156,7 @@
             </ul>
 
             <p>The images are distributed under the <a href="https://vmware.github.io/photon/assets/files/photon_tech_preview_license_agreement.pdf" target="_blank">VMware Technology Preview License Agreement</a>. Open source license information may be found in Crest™ <a href="https://dl.bintray.com/vmware/photon/iso/1.0TP2/x86_64/open_source_license_photon_1.0TP2_08272015.txt" target="_blank">Open Source License</a> file.</p>
-            <p>Crest™ source code is available on the VMware <a href="https://github.com/vmware/photon">Photon™ GitHub source repository</a>. You can build your own Crest™ ISO image by cloning the repo and following the instructions in <a href="https://github.com/vmware/photon/blob/master/README.md" target="_blank">README.md</a>.</p>
+            <p>Crest™ source code is available on the VMware <a href="https://github.com/vmware/photon">Photon™ GitHub source repository</a>. You can build your own Crest™ ISO image by cloning the repo and following the instructions in <a href="https://github.com/vmware/photon/blob/master/README.md" target="_blank">README.md</a>.</p> -->
 
           </div>
         </div>
