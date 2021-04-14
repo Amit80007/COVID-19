@@ -88,23 +88,30 @@
             <div>  
             <h4> Using Conda </h4>
               <ol>
-              <li> Download and Install Miniconda from [conda.io](https://docs.conda.io/en/latest/miniconda.html)</li><br />
-              <li> For Windows, launch Miniconda prompt shell. For MacOS, launch the terminal.</li><br />
+              <li> Download and Install Miniconda from <a href="https://docs.conda.io/en/latest/miniconda.html">conda.io</a></li>
+              <li> For Windows, launch Miniconda prompt shell. For MacOS, launch the terminal.</li>
               <li> Create a new virtual environment and install packages. 
-              ```python 
-              conda create -n crest python pandas tqdm
-              conda activate crest
-              ``` </li><br />
+                <pre class="line-numbers">
+                  <code class="language-python">
+                    conda create -n crest python pandas tqdm
+                    conda activate crest
+                  </code>
+                </pre>
+                </li>
               <li> If using cuda:
-              ```python
-              conda install pytorch cudatoolkit=10.1 -c pytorch
-              ```
+                <pre class="line-numbers">
+                  <code class="language-python">
+                    conda install pytorch cudatoolkit=10.1 -c pytorch
+                  </code>
+                </pre>
               else:
-              ```python
-              conda install pytorch cpuonly -c pytorch
-              ```
-              </l><br />
-              <li> Clone the repository. More details can be found at [docs.github.com](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) </li><br />
+              <pre class="line-numbers">
+                <code class="language-python">
+                  conda install pytorch cpuonly -c pytorch
+                </code>
+              </pre>
+              </li>
+              <li> Clone the repository. More details can be found at <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository">docs.github.com</a> </li>
               
               <li> Go to "x43_accessibility-" folder in your terminal/prompt shell. Run command.
                 <pre class="line-numbers">
@@ -114,30 +121,39 @@
                 </pre>
               
               </li>
-              <li> Install chromedriver. The details can be found in [chromium.org](https://chromedriver.chromium.org/downloads). </li>
+              <li> Install chromedriver. The details can be found in <a href="https://chromedriver.chromium.org/downloads">chromium.org</a>. </li>
               
-              <li> Download and Install google-chrome-stable from [ubuntuupdates.org](https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable). </li>
+              <li> Download and Install google-chrome-stable from <a href="https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable">ubuntuupdates.org</a>. </li>
               
               <li> Once all the required libraries are installed, run command in your terminal/prompt shell. 
-              ```python
-              python server.py
-              ``` </li><br />
+                <pre class="line-numbers">
+                  <code class="language-python">
+                    python server.py
+                  </code>
+                </pre>
+                </li>
               </ol></div>
               <div>
               <h4> Using Docker </h4>
               <ol>
-              <li> Clone the repository. More details can be found at [docs.github.com](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository). </li><br />
+              <li> Clone the repository. More details can be found at <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository">docs.github.com</a>. </li>
               
-              <li> Download and Install docker from [docker.com](https://docs.docker.com/get-docker/). Note: Make sure your docker server as well as crest image is running. </li><br />
+              <li> Download and Install docker from <a href="https://docs.docker.com/get-docker/">docker.com</a>. Note: Make sure your docker server as well as crest image is running. </li>
               
               <li> Go to "x43_accessibility-" folder in your terminal/prompt shell. Run command.
-              ```python
-              docker build -t crest .
-              ``` </li><br />
+                <pre class="line-numbers">
+                  <code class="language-python">
+                    docker build -t crest .
+                  </code>
+                </pre>
+                </li>
               <li> Once the docker image is created, run it by executing the following command.
-              ```python
-              docker container run --name crest_container -p 3000:3000 crest 
-              ``` </li><br />
+                <pre class="line-numbers">
+                  <code class="language-python">
+                    docker container run --name crest_container -p 3000:3000 crest 
+                  </code>
+                </pre>
+                 </li>
               </ol>
             </div>
             <!-- <p>If you want a quick and easy way to install Crest™ just about anywhere, you can grab one of the pre-built ISO images:</p>
