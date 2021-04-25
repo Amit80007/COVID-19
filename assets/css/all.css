@@ -177,6 +177,15 @@ td,
 th {
     padding: 0
 }
+.card-body {
+    min-height: 50px;
+    min-width: 500px;
+    margin-right: 5px;
+}
+
+.card-img-top{
+    opacity: 0.75;
+}
 /*!
   Ionicons, v2.0.0
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -188,7 +197,10 @@ th {
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
-
+section.supports p img {
+    border-radius: 50%;
+    width: auto
+}
 @font-face {
     font-family: "Ionicons";
     src: url("../fonts/ionicons.eot?v=2.0.0");
@@ -3168,6 +3180,11 @@ section.contributors p a {
     float: left;
     width: 100%
 }
+section.supports p a {
+    box-sizing: border-box;
+    float: left;
+    width: 100%
+}
 @media (min-width: 400px) {
     .container {
         padding: 0;
@@ -3187,6 +3204,9 @@ section.contributors p a {
     section.contributors p a {
         margin-left: 4%
     }
+    section.supports p a {
+        margin-left: 4%
+    }
     section.getting-started .row>div:first-child,
     section.about-photon .row .content:first-child,
     section.getting-photon .row .content:first-child,
@@ -3196,8 +3216,14 @@ section.contributors p a {
     section.contributors p a:first-child {
         margin-left: 0
     }
+    section.supports p a:first-child {
+        margin-left: 0
+    }
     section.contributors p a {
         width: 13.3333333333%
+    }
+    section.supports p a {
+        width: 25%
     }
     section.about-photon .row .content,
     section.getting-photon .row .content,
@@ -3207,6 +3233,10 @@ section.contributors p a {
         width: 82.6666666667%
     }
     section.contributors .content {
+        width: 100%;
+        margin-left: 0
+    }
+    section.supports .content {
         width: 100%;
         margin-left: 0
     }
@@ -3520,6 +3550,12 @@ section.contributors p:after,
     content: "";
     display: table
 }
+section.supports p:after,
+.row:after {
+    clear: both;
+    content: "";
+    display: table
+}
 .button.button-medium {
     font-size: 1.5em
 }
@@ -3708,7 +3744,7 @@ section {
     padding: 1.66em 0 2em;
     position: relative
 }
-section:nth-child(even) {
+section:nth-child(odd) {
     background-color: #e7e7e7
 }
 section.hero {
@@ -3796,11 +3832,31 @@ section.contributors p img {
     border-radius: 50%;
     width: auto
 }
+
+section.supports p a:nth-child(6n+1) {
+    margin-left: 0
+}
+section.supports p img {
+    border-radius: 50%;
+    width: auto
+}
 @media only screen and (max-width: 880px) {
     section.contributors p img {
         width: 70px
     }
 }
+@media only screen and (max-width: 880px) {
+    section.supports p img {
+        width: 70px
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    section.supports p img {
+        width: 70px
+    }
+}
+
 body {
     font-family: "proxima-nova-soft", Helvetica, Arial, sans-serif
 }

@@ -12,31 +12,35 @@
     <link href='favicon.png' rel='shortcut icon'>
     <link href='favicon.ico' rel='icon' type='image/ico'>
     <link href="assets/css/all.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body class='index'>
     <header>
       <div class='peelback'></div>
       <div class='container'>
         <div class='row'>
-          <div >
+          <!-- <div > -->
             <!-- class='brand-container' -->
-            <a class="brand" href="https://amit80007.github.io/COVID-19/"><h1>
+            <!-- <a class="brand" href="https://amit80007.github.io/COVID-19/">
+              <h1>
               Crest
             </h1>
-            </a>
+            </a> -->
             <!-- <div class='by-vmware'>
               by VMware, Inc.
             </div> -->
-          </div>
-          <nav>
+          <!-- </div> -->
+          <div class="content">
+          <nav style="width: 100%;">
             <a class="menu-actuator" href="#"><i class='ion-navicon'></i>
             Menu
             </a>
-            <div class='nav-collapse'>
+            <!-- class='nav-collapse'  -->
+            <div style="align-content: right;">
               <div class='container'>
                 <div class='row'>
-                  <a href="#what-is-crest">What is Crest</a>
-                  <a href="#getting-crest">Getting Crest</a>
+                  <!-- <a href="#what-is-crest">What is Crest</a> -->
+                  <!-- <a href="#getting-crest">Getting Crest</a> -->
                   <a href="#getting-started">Getting Started</a>
                   <a href="#support">Support</a>
                   <a href="#contributors">Contributors</a>
@@ -46,161 +50,68 @@
               </div>
             </div>
           </nav>
+          </div>
         </div>
       </div>
     </header>
     <section class='hero'>
       <div class='container'>
+        <div class="row">
+          <div class="col-sm-6" style="margin: auto;">
+            <h2 id="vmware-crest" style="font-size: 40px;">Crest</h2>
 
-        <h2 id="vmware-crest">Crest</h2>
-
-        <p>Automated Accessibility Testing Tool</p>
-        <a class="button button-primary button-large" href="https://gitlab.eng.vmware.com/xlabs/x43_accessibility-"><i class='ion-social-github'></i>
-        Fork
-        Crest
-        <i class='ion-ios-arrow-right'></i>
-        </a>
-      </div>
-    </section>
-    <section class='about'>
-      <div class='container'>
-        <div class='row'>
-          <div class='content'>
-            <h2 id="what-is-crest">What is Crest</h2>
-
+            <p style="font-size: 20px;">Automated Accessibility Testing Tool</p>
             <p>Crest quickly tests any HTML web page for a simple way to solve your accessibility testing problems. Provide a website URL to our callable API and expose potential WCAG violations.</p>
-
-            <h4>Currently supports:</h4>
-            <ul>
-              <li><strong>Keyboard Focus Indicator</strong></li>
-              <li><strong>Closed Captioning/ Transcript Check</strong></li>
-              <li><strong>Heading Analysis</strong></li>
-            </ul>
-
-            <!-- <p>See the <a href="/photon/assets/files/photon_faqs.pdf">FAQ</a> for more information.</p> -->
+            <a class="button button-primary button-large" href="https://gitlab.eng.vmware.com/xlabs/x43_accessibility-"><i class='ion-social-github'></i>
+            Fork
+            Crest
+            <i class='ion-ios-arrow-right'></i>
+            </a>
           </div>
-        </div>
+          <div class="col-sm-6">
+            <img alt="Image" src="assets/img/crest_main_page.png" />
+          </div>
+      </div>
       </div>
     </section>
-    <section>
-      <div class='container'>
-        <div class='row'>
-          <div class='content'>
-            <h2 id="getting-crest">Getting Crest</h2>
-            <div>  
-            <h4> Using Conda </h4>
-              <ol>
-              <li> Download and Install Miniconda from <a href="https://docs.conda.io/en/latest/miniconda.html">conda.io</a></li>
-              <li> For Windows, launch Miniconda prompt shell. For MacOS, launch the terminal.</li>
-              <li> Create a new virtual environment and install packages. 
-                <pre class="line-numbers">
-                  <code class="language-python">
-                    conda create -n crest python pandas tqdm
-                    conda activate crest
-                  </code>
-                </pre>
-                </li>
-              <li> If using cuda:
-                <pre class="line-numbers">
-                  <code class="language-python">
-                    conda install pytorch cudatoolkit=10.1 -c pytorch
-                  </code>
-                </pre>
-              else:
-              <pre class="line-numbers">
-                <code class="language-python">
-                  conda install pytorch cpuonly -c pytorch
-                </code>
-              </pre>
-              </li>
-              <li> Clone the repository. More details can be found at <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository">docs.github.com</a> </li>
-              
-              <li> Go to "x43_accessibility-" folder in your terminal/prompt shell. Run command.
-                <pre class="line-numbers">
-                  <code class="language-python">
-                    pip install -r requirements.txt
-                  </code>
-                </pre>
-              
-              </li>
-              <li> Install chromedriver. The details can be found in <a href="https://chromedriver.chromium.org/downloads">chromium.org</a>. </li>
-              
-              <li> Download and Install google-chrome-stable from <a href="https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable">ubuntuupdates.org</a>. </li>
-              
-              <li> Once all the required libraries are installed, run command in your terminal/prompt shell. 
-                <pre class="line-numbers">
-                  <code class="language-python">
-                    python server.py
-                  </code>
-                </pre>
-                </li>
-              </ol></div>
-              <div>
-              <h4> Using Docker </h4>
-              <ol>
-              <li> Clone the repository. More details can be found at <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository">docs.github.com</a>. </li>
-              
-              <li> Download and Install docker from <a href="https://docs.docker.com/get-docker/">docker.com</a>. Note: Make sure your docker server as well as crest image is running. </li>
-              
-              <li> Go to "x43_accessibility-" folder in your terminal/prompt shell. Run command.
-                <pre class="line-numbers">
-                  <code class="language-python">
-                    docker build -t crest .
-                  </code>
-                </pre>
-                </li>
-              <li> Once the docker image is created, run it by executing the following command.
-                <pre class="line-numbers">
-                  <code class="language-python">
-                    docker container run --name crest_container -p 3000:3000 crest 
-                  </code>
-                </pre>
-                 </li>
-              </ol>
-            </div>
-          </div>
-        </div>
+    <section class="supports">
+      <div class="container">
+        <div class="row">
+      <!-- <div class="row container-fluid py-2"> -->
+          <div class="content">
+            <h2 class="font-weight-light">Currently Supports:</h2>&nbsp;
+            <!-- <div class="d-flex flex-row flex-nowrap ">
+                <a class="card card-body" href=""> <img class="card-img-top" src="assets/img/keyboard_img.jpeg" alt="Card image cap" style="border-radius: 50%; width: auto;"><h3 style="text-align: center;">Keyboard Focus Indicator</h3></a>
+                <a class="card card-body" href=""> <img class="card-img-top" src="assets/img/keyboard_img.jpeg" alt="Card image cap" style="border-radius: 50%; width: auto;"><h3 style="text-align: center;">Audio/Video Check</h3></a>
+                <a class="card card-body"href=""> <img class="card-img-top" src="assets/img/keyboard_img.jpeg" alt="Card image cap" style="border-radius: 50%; width: auto;"><h3 style="text-align: center;">Heading Analysis</h3></a>
+            </div> -->
+            <p>
+              <a title="Amit Garg" href=""><img alt="Amit Garg" src="assets/img/kfi.png" />
+              </a>
+              <a title="Sheri Byrne Haber" href=""><img alt="Sheri Byrne Haber" src="assets/img/audio_video.png" />
+              </a>
+              <a title="Joyce Oshita" href=""><img alt="Joyce Oshita" src="assets/img/keyboard_img.jpeg" />
+              </a>
+            </p>
       </div>
-    </section>
-    <section class='getting-started'>
-    <div class='container'>
-      <div class='row'>
-        <h2 id='getting-started'>Getting Started</h2>
-        <p>We will provide a few guides to help get you started</p>
       </div>
     </div>
-      <!-- <div class='container'>
-        <div class='row'>
-          <h2 id='getting-started'>Getting Started</h2>
-          <p>We've provided a few guides to help get you started:</p>
+    </section>
+    <section>
+    <div class='container'>
+      <div class='row'>
+        <div class="content">
+          <h2>Getting Started</h2>&nbsp;
+          <p style="font-size: 13px;">Getting started with Crest in 5 minutes by following the instructions provided on the <a href="">API reference page</a>.</p>
         </div>
-        <div class="row">
-          <div>
-            <p><strong>Crest on VMware Fusion</strong></p>
-            <div><a href="https://github.com/vmware/photon/wiki/Running-Project-Photon-on-Fusion" target="_blank" class="button">Get Started</a></div>
-          </div>
-          <div>
-            <p><strong>Crest on VMware vSphere 5.5<br /> and 6.0</strong></p>
-            <div><a href="https://github.com/vmware/photon/wiki/Running-Project-Photon-on-vSphere" target="_blank" class="button">Get Started</a></div>
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <p><strong>Crest on Google Compute Engine</strong></p>
-            <div><a href="https://github.com/vmware/photon/wiki/Running-Photon-OS-on-Google-Compute-Engine" target="_blank" class="button">Get Started</a></div>
-          </div>
-          <div>
-            <p><strong>Crest on vCloud Air</strong></p>
-            <div><a href="https://github.com/vmware/photon/wiki/Running-Project-Photon-on-vCloud-Air" target="_blank" class="button">Get Started</a></div>
-          </div>
-        </div>
-      </div> -->
+      </div>
+    </div>
     </section>
     <section class='support'>
       <div class='container'>
         <div class='row'>
-          <div class='content'>
-            <h2 id="support">Support</h2>
+          <div class='content' style="font-size: 13px;">
+            <h2 id="support">Support</h2>&nbsp;
 
             <p>Crest is released as open source software and comes with no commercial support.</p>
             <p>But since we want to ensure success and recognize that Crest consumers might fall into a range of roles - from developers that are steeped in the conventions of open-source to customers that are more accustomed to VMware commercial offerings, we offer several methods of engaging with the Crest team and community.</p>
@@ -215,7 +126,7 @@
       <div class='container'>
         <div class='row'>
           <div class='content'>
-            <h2 id='contributors'>Contributors</h2>
+            <h2 id='contributors'>Contributors</h2>&nbsp;
             <p>
               <a title="Amit Garg" href=""><img alt="Amit Garg" src="https://avatars.githubusercontent.com/u/82112579?v=4" />
               </a>
@@ -231,18 +142,18 @@
     <section class='contributing'>
       <div class='container'>
         <div class='row'>
-          <div class='content'>
-            <h2 id="contributing">Contributing</h2>
+          <div class='content' style="font-size: 13px;">
+            <h2 id="contributing">Contributing</h2>&nbsp;
             <p>The Crest project team welcomes contributions from the community. If you wish to contribute code, please look at our <a title="Amit Garg" href="https://gitlab.eng.vmware.com/xlabs/x43_accessibility-/-/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> file.</p>
           </div>
         </div>
       </div>
     </section>
     <section class='license'>
-      <div class='container'>
+      <div class='container' style="font-size: 13px;">
         <div class='row'>
           <div class='content'>
-            <h2 id="license">License</h2>
+            <h2 id="license">License</h2>&nbsp;
 
             <p>Crest is comprised of many open source software components, each of which has its own license that is located in the source code of the respective component as well as documented in the <a href="https://gitlab.eng.vmware.com/xlabs/x43_accessibility-/-/blob/master/LICENSE">open source license file</a> accompanying the Crest distribution.</p>
 
@@ -266,6 +177,9 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
   <script src="//use.typekit.net/lqm4sxw.js" type="text/javascript"></script><script src="assets/js/all.js" type="text/javascript"></script>
   <script type="text/javascript">
