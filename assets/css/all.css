@@ -197,7 +197,7 @@ th {
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
-section.supports p img {
+section.currently-supports p img {
     border-radius: 50%;
     width: auto
 }
@@ -3180,7 +3180,7 @@ section.contributors p a {
     float: left;
     width: 100%
 }
-section.supports p a {
+section.currently-supports p a {
     box-sizing: border-box;
     float: left;
     width: 100%
@@ -3204,7 +3204,7 @@ section.supports p a {
     section.contributors p a {
         margin-left: 4%
     }
-    section.supports p a {
+    section.currently-supports p a {
         margin-left: 4%
     }
     section.getting-started .row>div:first-child,
@@ -3216,13 +3216,13 @@ section.supports p a {
     section.contributors p a:first-child {
         margin-left: 0
     }
-    section.supports p a:first-child {
+    section.currently-supports p a:first-child {
         margin-left: 0
     }
     section.contributors p a {
         width: 13.3333333333%
     }
-    section.supports p a {
+    section.currently-supports p a {
         width: 25%
     }
     section.about-photon .row .content,
@@ -3236,7 +3236,7 @@ section.supports p a {
         width: 100%;
         margin-left: 0
     }
-    section.supports .content {
+    section.currently-supports .content {
         width: 100%;
         margin-left: 0
     }
@@ -3550,7 +3550,7 @@ section.contributors p:after,
     content: "";
     display: table
 }
-section.supports p:after,
+section.currently-supports p:after,
 .row:after {
     clear: both;
     content: "";
@@ -3833,10 +3833,10 @@ section.contributors p img {
     width: auto
 }
 
-section.supports p a:nth-child(6n+1) {
+section.currently-supports p a:nth-child(6n+1) {
     margin-left: 0
 }
-section.supports p img {
+section.currently-supports p img {
     border-radius: 50%;
     width: auto
 }
@@ -3846,13 +3846,13 @@ section.supports p img {
     }
 }
 @media only screen and (max-width: 880px) {
-    section.supports p img {
+    section.currently-supports p img {
         width: 70px
     }
 }
 
 @media only screen and (max-width: 880px) {
-    section.supports p img {
+    section.currently-supports p img {
         width: 70px
     }
 }
