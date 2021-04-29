@@ -199,7 +199,9 @@ th {
 */
 section.currently-supports p img {
     border-radius: 50%;
-    width: auto
+    width: auto;
+    height: 250px;
+
 }
 @font-face {
     font-family: "Ionicons";
